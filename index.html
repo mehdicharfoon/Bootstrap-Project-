@@ -12,7 +12,7 @@
         <!-- Additional CSS must be placed after Bootstrap CSS -->
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
         
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
         <link rel="stylesheet" href="css/styles.css" />
         <title>NuCamp: A Better Way To Camp</title>
@@ -30,7 +30,7 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col-12 col-md-4 col-xl-2 mt-4">
-                    <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#reserveModal">Reserve Campiste</button>
+                    <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#reserveModal">Reserve Campiste</button>
                 </div>
             </div>
         </div>
@@ -40,8 +40,8 @@
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
              <div class="modal-content">
-               <div class="modal-header">
-                   <h3 class="modal-title bg-info text-white">Reserve a Campsite</h3>
+               <div class="modal-header bg-info text-white">
+                   <h3 class="modal-title">Reserve a Campiste</h3>
                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                </div>
                <div class="modal-body">
@@ -88,7 +88,7 @@
                         <div class="row form-group">
                              <div class="col">
 
-                              <button class="btn btn-secondary" data-dismiss="modal" type="submit">Cancel</button>
+                              <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
                               <button class="btn btn-primary" type="submit">Search</button>
                              </div>
                         </div>
@@ -162,7 +162,7 @@
     <div class="container">
         <div class="row row-content">
             <div class="col-md-8 mx-auto">
-               <div id="homeCarousel" class="carousel slide" data-ride=""carousel>
+               <div id="homeCarousel" class="carousel slide" data-ride="carousel">
                    <ol class="carousel-indicators">
                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
                        <li data-target="#homeCarousel" data-slide-to="1"></li>
@@ -294,22 +294,7 @@
        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-       <script>
-        $(function() {
-            $(".carousel").carousel( { interval: 2000 } );
-            $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
-                    $(".carousel").carousel("pause");
-                    $("#carouselButton").children("i").removeClass("fa-pause");
-                    $("#carouselButton").children("i").addClass("fa-play");
-                } else {
-                    $(".carousel").carousel("cycle");
-                    $("#carouselButton").children("i").removeClass("fa-play");
-                    $("#carouselButton").children("i").addClass("fa-pause"); 
-                }
-            });
-        });
-    </script>
+       <script src="js/scripts.js"></script>
       
 
 </body>
